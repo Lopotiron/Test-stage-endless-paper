@@ -192,9 +192,16 @@ function draw_event(event)
     selection = false;
 }
 
+function clear_event(event)
+{
+    arr_circle.length = 0;
+    circle.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 //link functions with events
 canvas.addEventListener('mousedown', mouse_pressed_event);
 canvas.addEventListener('mousemove', mouse_moved_event);
 canvas.addEventListener('mouseup', mouse_released_event);
 document.getElementById('selection').addEventListener('click', selection_event);
 document.getElementById('draw').addEventListener('click', draw_event);
+document.getElementById('clear').addEventListener('click', clear_event);
